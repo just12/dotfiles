@@ -168,7 +168,7 @@ bindsym $mod+r mode "resize"
 
 
 set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
+set $inactive-bg-color   #1f2633
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
@@ -179,8 +179,6 @@ client.focused          $bg-color           $bg-color          $text-color      
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
-
-hide_edge_borders both
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -196,11 +194,11 @@ bar {
 	}
 }
 
-#bindsym $mod+d exec rofi -show run -lines 5 -eh 1 -width 100 -padding 300 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 15"
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run -lines 5 -eh 1 -width 100 -height 0 -padding 460 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 15"
+#bindsym $mod+d exec rofi -show run
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 bindsym $mod+f exec chromium-browser
-bindsym $mod+t exec nautilus
+bindsym $mod+t exec thunar
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
@@ -208,10 +206,19 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
 
 exec_always compton
-exec_always feh --bg-fill ~/Imágenes/wallpaper1.jpg
+exec_always feh --bg-fill ~/Imágenes/nielsen-ramon-277806.jpg
 
 gaps inner 20
 gaps outer 5
 
 bindsym $mod+home exec playerctl next
 #bindsym $mod+control+z exec playerctl prevoius
+
+new_window none
+hide_edge_borders both
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Escape exit
+
+#take screenshot
+bindsym $mod+m exec scrot '/home/just/Imágenes/Scr/%Y-%m-%d-%H:%M:%S-scrot.png' -e feh /home/just/Imágenes/Scr/%Y-%m-%d-%H:%M:%S-scrot.png
