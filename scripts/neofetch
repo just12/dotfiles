@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+neofetch --disable model uptime packages resolution cpu gpu memory --color_blocks off --backend ascii --source ~/scripts/ascii.txt
+#toilet -f smmono9.tlf OwO what is this? | lolcat -F 1 -a

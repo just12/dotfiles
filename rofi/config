@@ -1,0 +1,24 @@
+#                 _____ 
+#     _________  / __(_)
+#    / ___/ __ \/ /_/ / 
+#   / /  / /_/ / __/ /  
+#  /_/   \____/_/ /_/   
+#                    
+                
+rofi.modi:             run,window
+rofi.width:            50
+rofi.lines:            10
+rofi.columns:          2
+#rofi.font:            Artwiz Lemon
+rofi.color-normal:     #111111,#555555,#111111,#333333,#ffffff
+rofi.color-active:     #222222,#aaaaaa,#555555,#ffffff,#000000
+rofi.color-window:     #111111,#444444
+rofi.bw:               5
+rofi.padding:          10
+rofi.terminal:         urxvt
+rofi.sidebar-mode:     true
+rofi.line-margin:      0
+rofi.separator-style:  solid
+rofi.hide-scrollbar:   true
+rofi.display-run:      ł
+rofi.display-window:   µ

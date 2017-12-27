@@ -1,0 +1,10 @@
+#!/bin/bash
+
+youtube-dl -x --audio-format mp3 --audio-quality 0 --embed-thumbnail
+
+if [[ "$2" == '1' ]]
+	then
+		youtube-dl -x --audio-format mp3 --audio-quality 0 --embed-thumbnail $1
+	else
+		youtube-dl --extract-audio --audio-format mp3  --output '%(title)s.%(ext)s' --add-metadata --metadata-from-title "%(artist)s - %(title)s" --no-mtime $1
+fi
